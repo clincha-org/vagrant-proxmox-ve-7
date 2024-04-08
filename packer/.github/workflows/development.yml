@@ -1,0 +1,10 @@
+name: Development
+on:
+  push:
+    branches-ignore:
+      - main
+jobs:
+  development:
+    uses: ./.github/workflows/packer-build.yml
+    with:
+      release: false

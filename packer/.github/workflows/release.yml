@@ -1,0 +1,15 @@
+name: Release
+permissions:
+  contents: write
+on:
+  push:
+    tags:
+      - "[0-9]+.[0-9]+.[0-9]+"
+jobs:
+  release:
+    uses: ./.github/workflows/packer-build.yml
+    with:
+      release: true
+      version: ${{ github.ref_name }}
+    secrets:
+      ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}

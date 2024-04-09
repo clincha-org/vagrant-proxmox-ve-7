@@ -22,14 +22,14 @@ Ensure you have met the following dependencies:
 ```ruby
 Vagrant.configure("2") do |config|
   config.vm.box = "clincha/proxmox-ve-7"
-  config.vm.box_version = "1.0.0"
+  config.vm.box_version = "1.0.1"
 end
 ```
 
 ### CLI
 
 ```bash
-vagrant init clincha/proxmox-ve-7 --box-version 1.0.0
+vagrant init clincha/proxmox-ve-7 --box-version 1.0.1
 vagrant up
 ```
 

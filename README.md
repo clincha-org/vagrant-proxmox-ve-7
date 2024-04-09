@@ -53,3 +53,4 @@ ssh -p 2222 vagrant@127.0.0.1
 
 You can access the Proxmox web interface by navigating to `https://127.0.0.1:8006` in your browser. The default username is `root` and the password is `vagrant`.
 
+![proxmox-gui.png](img/proxmox-gui.png)

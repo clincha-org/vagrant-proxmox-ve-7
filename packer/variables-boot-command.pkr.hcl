@@ -2,25 +2,29 @@ variable "boot_command" {
   type    = list(string)
   default = [
     "<enter>", # Terminal install
-    "<wait30>", # Wait for DHCP and clock sync
+    "<wait1m>", # Wait for DHCP and clock sync
     "<enter>", # Licence accept
-    "<wait2>",
+    "<wait>",
     "<enter>", # Choose disk
-    "<wait2>",
+    "<wait>",
     "united kingdom<down><enter><enter>", # Choose country
-    "<wait2>",
-    "<tab><tab><tab><tab><enter>", # Complete
-    "<wait2>",
-    "vagrant<tab>", # root password
-    "<wait2>",
-    "vagrant<tab>", # root password
-    "<wait2>",
+    "<wait>",
+    "<tab><wait>",
+    "<tab><wait>",
+    "<tab><wait>",
+    "<tab><wait>",
+    "<enter>", # Complete
+    "<wait>",
+    "vagrant<wait><tab>", # root password
+    "<wait>",
+    "vagrant<wait><tab>", # root password
+    "<wait>",
     "vagrant<leftShiftOn>'<leftShiftOff>localhost.com", # root email 'vagrant@localhost.com'
-    "<wait2>",
-    "<tab><tab><enter>", # Complete
-    "<wait2>",
-    "<tab><tab><tab><tab><tab><tab><enter>", # Complete network screen
-    "<wait2>",
+    "<wait>",
+    "<tab><wait><tab><wait><enter>", # Complete
+    "<wait>",
+    "<tab><wait><tab><wait><tab><wait><tab><wait><tab><wait><tab><wait><enter>", # Complete network screen
+    "<wait>",
     "<enter>", # Start install
   ]
 }

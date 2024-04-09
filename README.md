@@ -22,14 +22,14 @@ Ensure you have met the following dependencies:
 ```ruby
 Vagrant.configure("2") do |config|
   config.vm.box = "clincha/proxmox-ve-7"
-  config.vm.box_version = "1.0.0"
+  config.vm.box_version = "1.0.1"
 end
 ```
 
 ### CLI
 
 ```bash
-vagrant init clincha/proxmox-ve-7 --box-version 1.0.0
+vagrant init clincha/proxmox-ve-7 --box-version 1.0.1
 vagrant up
 ```
 
@@ -53,3 +53,4 @@ ssh -p 2222 vagrant@127.0.0.1
 
 You can access the Proxmox web interface by navigating to `https://127.0.0.1:8006` in your browser. The default username is `root` and the password is `vagrant`.
 
+![proxmox-gui.png](img/proxmox-gui.png)

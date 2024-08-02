@@ -48,7 +48,7 @@ jobs:
         if: ${{ inputs.release == false }}
         working-directory: packer
         run: |
-          packer build \
+          sudo packer build \
           -except "vagrant-cloud" \
           .
 
@@ -56,7 +56,7 @@ jobs:
         if: ${{ inputs.release == true }}
         working-directory: packer
         run: |
-          packer build \
+          sudo packer build \
           -var "version=${{ inputs.version }}" \
           -var "access_token=${{ secrets.ACCESS_TOKEN }}" \
           -var "version_description=Build $(date +'%Y-%m-%d')" \
